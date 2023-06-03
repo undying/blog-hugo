@@ -1,3 +1,12 @@
 [submodule "themes/hugo-theme-shell"]
 	path = themes/hugo-theme-shell
 	url = https://github.com/Yukuro/hugo-theme-shell.git
+[submodule "themes/meme"]
+	path = themes/meme
+	url = https://github.com/reuixiy/hugo-theme-meme.git
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "public"]
+	path = public
+	url = git@github.com:undying/undying.github.io.git
