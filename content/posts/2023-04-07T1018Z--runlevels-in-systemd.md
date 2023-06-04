@@ -1,7 +1,6 @@
 ---
 title: "Runlevels in Systemd"
 date: 2023-04-07T10:18:38+03:00
-draft: true
 tags:
 - systemd
 - runlevel

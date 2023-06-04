@@ -141,9 +141,9 @@ chroot /mnt/gentoo /bin/bash
 
 ```sh
 grep EE /var/log/Xorg.0.log
-[    25.504] (EE) AIGLX: reverting to software rendering
-[    25.517] (EE) AIGLX error: dlopen of /usr/lib64/dri/swrast_dri.so failed (libstdc++.so.6: cannot open shared object file: No such file or directory)
-[    25.517] (EE) GLX: could not load software renderer
+[25.504] (EE) AIGLX: reverting to software rendering
+[25.517] (EE) AIGLX error: dlopen of /usr/lib64/dri/swrast_dri.so failed (libstdc++.so.6: cannot open shared object file: No such file or directory)
+[25.517] (EE) GLX: could not load software renderer
 
 ```
 

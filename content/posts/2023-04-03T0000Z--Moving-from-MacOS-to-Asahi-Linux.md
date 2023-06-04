@@ -1,7 +1,6 @@
 ---
 title: "Moving from MacOS to Asahi Linux"
 date: 2023-04-03T00:22:42+03:00
-draft: true
 tags:
 - asahi
 - linux
@@ -19,7 +18,7 @@ tags:
 - HDMI: ❌
 - Speakers: ❌
 - Touchpad: ✅
-- WiFi: ✅
+- Wi-Fi: ✅
 
 #### Software
 - Obsidian: ✅

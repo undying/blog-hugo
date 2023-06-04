@@ -4,7 +4,6 @@ date: 2020-05-29 11:24:01 +0300
 tags:
 - aws
 - dns
-mermaid: true
 ---
 
 What we have:
@@ -16,10 +15,10 @@ What we need:
 
 - Ability to resolve domain zone hosted on premises DNS Servers from AWS VPC
 
-{% mermaid %}
+{{< mermaid >}}
 graph LR
   A[EC2 Instance] -->|a.domain.local| B[Route 53 Forward] -->|a.domain.local| C[DNS On Premises]
-{% endmermaid %}
+{{< /mermaid >}}
 
 The configuration is straightforward and well described in [official documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver.html).
 
@@ -39,31 +38,31 @@ When investigating traffic you can find the following errors:
 This is because when dealing with CNAME server makes multiple requests.
 And if there is no rules for CNAME requests will go to the internet resolvers.
 
-{% mermaid %}
+{{<mermaid>}}
 graph LR
   A[EC2 Instance] -->|a.domain.local| B[Route 53] -->|a.domain.local| C[DNS On Premises]
   C --> |CNAME x.domain.local| B
-{% endmermaid %}
+{{</mermaid>}}
 
-{% mermaid %}
+{{<mermaid>}}
 graph LR
   A[EC2 Instance] -->|a.domain.local| B[Route 53] -->|x.domain.local| C[Internet]
   C -->|NXDOMAIN| B
   B -->|NXDOMAIN| A
-{% endmermaid %}
+{{</mermaid>}}
 
 To fix errors we need create R53 Forward Rules for CNAME domains as well.
 
-{% mermaid %}
+{{<mermaid>}}
 graph LR
   A[EC2 Instance] -->|a.domain.local| B[R53 Forward] -->|a.domain.local| C[DNS On Premises]
   C[DNS On Premises] -->|CNAME x.domain.local| B[R53 Forward]
-{% endmermaid %}
+{{</mermaid>}}
 
-{% mermaid %}
+{{<mermaid>}}
 graph LR
   A[EC2 Instance] -->|a.domain.local| B[R53 Forward] -->|x.domain.local| C[DNS On Premises]
   C -->|A 192.168.1.200| B
   B -->|A 192.168.1.200| A
-{% endmermaid %}
+{{</mermaid>}}
 

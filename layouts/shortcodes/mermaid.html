@@ -1,0 +1,15 @@
+{{ if le (.Page.Scratch.Get "mermaidInserted") 0 }}
+{{ .Page.Scratch.Add "mermaidInserted" 1 }}
+<script async type="application/javascript" src="https://unpkg.com/mermaid@10.2.2/dist/mermaid.min.js">
+  var config = {
+    startOnLoad:true,
+    theme:'{{ if .Get "theme" }}{{ .Get "theme" }}{{ else }}neutral{{ end }}',
+    align:'{{ if .Get "align" }}{{ .Get "align" }}{{ else }}center{{ end }}'
+  };
+  mermaid.initialize(config);
+</script>
+{{ end }}
+
+<div class="mermaid">
+  {{.Inner|safeHTML}}
+</div>

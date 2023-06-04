@@ -18,17 +18,17 @@ After experimenting a bit here is an example mounting lvm volumes.
 First, let's create loop device for LVM:
 
 ```sh
-  dd if=/dev/zero of=/tmp/loop bs=1M count=100
-  losetup /dev/loop0 /tmp/loop
+dd if=/dev/zero of=/tmp/loop bs=1M count=100
+losetup /dev/loop0 /tmp/loop
 ```
 
 Then, making an LVM device:
 
 ```sh
-  pvcreate /dev/loop0
-  vgcreate vg1 /dev/loop0
-  lvcreate --size 90M --name lv1 vg1
-  mkfs.xfs /dev/vg1/lv1
+pvcreate /dev/loop0
+vgcreate vg1 /dev/loop0
+lvcreate --size 90M --name lv1 vg1
+mkfs.xfs /dev/vg1/lv1
 ```
 
 And finally let's run container and mount block device:
