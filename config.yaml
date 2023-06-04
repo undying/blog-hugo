@@ -1,0 +1,11 @@
+---
+baseURL: "http://undying.github.io"
+languageCode: "en-us"
+title: "My Digital Chronicle"
+theme: "PaperMod"
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
