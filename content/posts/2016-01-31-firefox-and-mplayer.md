@@ -70,7 +70,7 @@ Click on it with right mouse button and the menu will appear. In this menu you c
 <br><br>
 
 Mplayer shortcats you may want to know:
-{% highlight bash %}
+```sh
  keyboard control
         LEFT and RIGHT
              Seek backward/forward 10 seconds.
@@ -102,7 +102,7 @@ Mplayer shortcats you may want to know:
              Toggle fullscreen (also see -fs).
         T
              Toggle stay-on-top (also see -ontop).
-{% endhighlight %}
+```
 
 Well done!
 Now we can watch our favorite serials with mplayer and even with higher quality than it was with Flash player, because mplayer works much faster then the last one.

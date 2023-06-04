@@ -5,14 +5,13 @@ tags:
 - bash
 - io
 - monitoring
-commentIssueId: 6
 ---
 
 
 I had the need to implement pure bash solution for IO usage monitoring without any tools installed on OS, do this fast and accurately.
 After little reaserching about /sys/ filesystem the next script was born:
 
-{% highlight bash %}
+```sh
 #! /bin/bash
 
 SLEEP=0.01
@@ -46,11 +45,11 @@ for dev in ${!ops[@]};do
   echo ${dev} ${ops[${dev}]}
 done
 
-{% endhighlight %}
+```
 
 The usage is simple:
 
-{% highlight bash %}
+```sh
 
 ./disk_io_usage.sh
 xvdb 10
@@ -60,5 +59,5 @@ xvda 0
 xvdb 20
 xvda 0
 
-{% endhighlight %}
+```
 

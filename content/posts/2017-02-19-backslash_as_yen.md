@@ -5,30 +5,29 @@ tags:
 - gentoo
 - backslash
 - yen
-commentIssueId: 7
 ---
 
 If while browsing the internet you have a problem with backslash character which displayed as yen sign you can fix it this way.
 
 First, let's install the appropriate fonts.
 
-{% highlight bash %}
+```sh
 emerge -av media-fonts/droid
-{% endhighlight %}
+```
 
 Then we have to enable them for wide system.
 
-{% highlight bash %}
+```sh
 eselect fontconfig enable 59-google-droid-sans.conf
 eselect fontconfig enable 59-google-droid-sans-mono.conf
 eselect fontconfig enable 59-google-droid-serif.conf
-{% endhighlight %}
+```
 
 Next step is to clean fonts cache.
 
-{% highlight bash %}
+```sh
 fc-cache -rf
-{% endhighlight %}
+```
 
 That's all.
 
