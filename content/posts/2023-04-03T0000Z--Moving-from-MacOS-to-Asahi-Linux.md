@@ -4,7 +4,7 @@ date: 2023-04-03T00:22:42+03:00
 tags:
 - asahi
 - linux
-- macos
+- macOS
 ---
 
 ## Moving from MacOS to Asahi Linux

@@ -9,3 +9,10 @@ menu:
     - identifier: about
       name: About
       url: /about/
+
+params:
+  socialIcons:
+    - name: github
+      url: "https://github.com/undying"
+    - name: stackoverflow
+      url: "https://stackoverflow.com/users/2020593/kron"
