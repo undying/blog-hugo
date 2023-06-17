@@ -11,7 +11,7 @@ tags:
 
 ### Status
 #### Hardware
-- Audio Jack: ✅
+- 3.5mm Audio Jack: ⚠ (It's been detected properly, but not working) [1](https://github.com/AsahiLinux/linux/issues/70#issuecomment-1324744251)
 - Bluetooth: ✅
 - Camera: ❌
 - Fingerprint: ❌
@@ -31,3 +31,7 @@ tags:
 - Brightness Control: ✅
 - Hibernate: ❌
 - Suspend to RAM: ⚠ (OS is being suspended but laptop is keep working and draining battery)
+
+## References
+- [Asahi Feature Support](https://github.com/AsahiLinux/docs/wiki/Feature-Support)
+
