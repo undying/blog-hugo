@@ -8,6 +8,10 @@ space := $(empty) $(empty)
 server:
 	hugo server --buildDrafts
 
+.PHONY: build
+build:
+	hugo
+
 .PHONY: post
 post:
 ifeq ($(NAME),)
