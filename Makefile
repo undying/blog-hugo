@@ -19,3 +19,10 @@ ifeq ($(NAME),)
 else
 	hugo new "posts/$(DATE)--$(subst $(space),-,$(NAME)).md"
 endif
+
+.PHONY: publish
+publish:
+	git commit -av
+	cd public && \
+		(cd ../ && git show -s --format='%s') \
+		|git commit -aF -
