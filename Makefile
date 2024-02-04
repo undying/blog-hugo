@@ -22,7 +22,7 @@ endif
 
 .PHONY: publish
 publish:
-	git commit -av
+	-git commit -a
 	cd public && \
 		(cd ../ && git show -s --format='%s') \
 		|git commit -aF -
