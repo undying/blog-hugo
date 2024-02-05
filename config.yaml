@@ -16,3 +16,7 @@ params:
       url: "https://github.com/undying"
     - name: stackoverflow
       url: "https://stackoverflow.com/users/2020593/kron"
+
+services:
+  googleAnalytics:
+    ID: G-6EM4NECWNX
